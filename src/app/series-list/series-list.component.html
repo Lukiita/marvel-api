@@ -1,0 +1,13 @@
+<div class="container">
+
+
+
+    <div *ngFor="let serie of series.dataArray" class="serie" (click)="getDescription(serie.id)">
+      <img src="{{serie.thumbnail.path}}.{{serie.thumbnail.extension}}" alt="series">7
+      <span>Title: {{serie.title}}</span>
+      <p>{{serie.description}}</p>
+    </div>
+
+  </div>
+
+

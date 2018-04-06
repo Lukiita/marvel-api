@@ -1,0 +1,21 @@
+
+.container {
+  color: white;
+  background-color: rgb(34, 31, 31);
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 20px;
+}
+.serie {
+  text-align: center;
+}
+.serie img {
+  width: 100%;
+  height: 350px;
+}
+.serie span {
+  font-size: 16pt;
+}
+

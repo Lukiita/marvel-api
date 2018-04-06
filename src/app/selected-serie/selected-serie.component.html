@@ -1,0 +1,40 @@
+
+  <div class="container container-fluid">
+    <div class="teste row align-items-center">
+    <div class=" teste2 col-12 col-md-6">
+        <img alt="Grandfather with child" src="{{description.thumbnail.path}}.{{description.thumbnail.extension}}"
+          sizes="(max-width: 660px), 660px">
+      </div>
+      <div class="col-12 col-md-6">
+        <h3>{{description.title}}</h3>
+        <div>
+          <p *ngIf="description.description!=null">Description: {{description.description}}</p>
+          <div *ngIf="characters.length>0">
+            <span>Characters:</span>
+            <span *ngFor="let character of characters  let i = index"> {{character}}
+              <span *ngIf="i+1<characters.length">, </span>
+              <span *ngIf="i+1==characters.length">.</span>
+            </span>
+          </div>
+          <div *ngIf="creators.length>0">
+            <span>Creators:</span>
+            <span *ngFor="let creator of creators  let i = index"> {{creator}}
+              <span *ngIf="i+1<creators.length">, </span>
+              <span *ngIf="i+1==creators.length">.</span>
+            </span>
+          </div>
+          <p>Start Year: {{description.startYear}}</p>
+          <p>End Year: {{description.endYear}}</p>
+          <p *ngIf="comics>0">Comics: {{comics}}</p>
+          <div *ngIf="stories.length>0">
+            <span>Stories:</span>
+            <span *ngFor="let storie of stories  let i = index"> {{storie}}
+              <span *ngIf="i+1<stories.length">, </span>
+              <span *ngIf="i+1==stories.length">.</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
